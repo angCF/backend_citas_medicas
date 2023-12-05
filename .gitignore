@@ -1,7 +1,0 @@
-.idea/*
-*.zip
-.vscode
-# package directories
-./proyecto/node_modules
-./proyecto/dist
-./proyecto/.env
