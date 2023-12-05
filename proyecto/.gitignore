@@ -1,8 +1,8 @@
-proyecto/.env
+.env
 # package directories
-proyecto/node_modules/
-proyecto/jspm_packages/
-proyecto/dist
+node_modules/
+jspm_packages/
+dist
 .idea/*
 *.zip
 .vscode
