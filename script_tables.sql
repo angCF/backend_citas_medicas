@@ -6,7 +6,6 @@ CREATE TABLE doctor (
     nombre VARCHAR(255) NOT NULL,
     apellido VARCHAR(255) NOT NULL,
     correo VARCHAR(255) NOT NULL,
-    consultorio VARCHAR(50) NOT NULL,
     especialidad ENUM('medicina_general','cardiologia','medicina_interna','dermatologia',
     'rehabilitacion_fisica','psicologia','odontologia','radiologia') NOT NULL,
     PRIMARY KEY (id_prof)
