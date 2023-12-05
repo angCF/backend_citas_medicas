@@ -1,7 +1,8 @@
+.env
+# package directories
+node_modules/
+jspm_packages/
+dist
 .idea/*
 *.zip
 .vscode
-# package directories
-/node_modules
-/dist
-.env
