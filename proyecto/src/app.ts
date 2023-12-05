@@ -4,6 +4,9 @@ import connection from "./db/config";
 import { urlencoded, json } from "body-parser";
 import dotenv from 'dotenv';
 import cors from 'cors';
+import paciente_routes from './routes/paciente.routes';
+import doctor_routes from './routes/doctor.routes';
+import cita_routes from './routes/cita.routes';
 dotenv.config();
 
 const app = express();
@@ -12,6 +15,9 @@ app.use(cors(),json(),urlencoded());
 app.get('/', (req : Request, res: Response) => {
     res.send('Bienvenid@s');
 })
+app.use('/eps/pacientes',paciente_routes);
+app.use('/eps/doctores',doctor_routes);
+app.use('/eps/citas',cita_routes);
 //Error por rutas inexistentes
 app.use( (req : Request, res: Response) => {
     res.status(404).send('404: Page Not Found');

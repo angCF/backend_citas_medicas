@@ -8,6 +8,7 @@ const config_1 = __importDefault(require("./db/config"));
 const body_parser_1 = require("body-parser");
 const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
+const paciente_routes_1 = __importDefault(require("./routes/paciente.routes"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)(), (0, body_parser_1.json)(), (0, body_parser_1.urlencoded)());
@@ -25,8 +26,9 @@ app.use((req, res) => {
 config_1.default.sync().then(() => {
     console.log('Database online');
 }).catch(err => {
-    console.log('Error en la conexión', err);
+    console.log('Error with connection to Database', err);
 });
 app.listen(process.env.PORT, () => {
-    console.log(`Server listening on: http://${process.env.HOST}/${process.env.PORT}`);
+    console.log(`Server listening on: http://${process.env.HOST}:${process.env.PORT}`);
 });
+app.use('/eps/pacientes', paciente_routes_1.default);

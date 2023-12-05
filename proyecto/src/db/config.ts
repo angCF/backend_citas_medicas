@@ -1,5 +1,8 @@
 import { Sequelize } from 'sequelize-typescript';
 import * as dotenv from 'dotenv';
+import { Paciente } from '../models/paciente';
+import { Cita } from '../models/cita';
+import { Doctor } from '../models/doctor';
 dotenv.config();
 const connection = new Sequelize({
     dialect: 'mysql',
@@ -8,7 +11,7 @@ const connection = new Sequelize({
     password: process.env.DB_PWD,
     database: process.env.DATABASE,
     logging: false,
-    models: [__dirname + '/models']
+    models: [Paciente, Cita, Doctor]
 });
 
 export default connection;
