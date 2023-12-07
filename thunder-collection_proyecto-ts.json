@@ -1,0 +1,297 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "proyecto-ts",
+    "dateExported": "2023-12-07T20:45:38.273Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "543893a3-9635-4ecd-bdf7-b69d8a0b9aea",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "POST Paciente",
+            "url": "http://127.0.0.1:3000/eps/pacientes",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-12-05T21:50:38.814Z",
+            "modified": "2023-12-07T20:39:12.462Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"num_cedula\": 765663,\n  \"nombre\": \"Gustavo\",\n  \"apellido\": \"Castro\",\n  \"edad\": \"1960-09-15\",\n  \"telefono\": \"33145678951\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8b471d2d-7774-4833-9ce1-c4686b17388f",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "POST Cita",
+            "url": "http://127.0.0.1:3000/eps/citas",
+            "method": "POST",
+            "sortNum": 12500,
+            "created": "2023-12-07T20:15:54.831Z",
+            "modified": "2023-12-07T20:39:32.027Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"fecha_hora\": \"2023-11-04T15:40:00\",\n  \"num_cedula\": 765663,\n  \"id_prof\": 10246546\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ce1fec07-7311-4efd-922f-cc3a439cc5b9",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "POST Doctor",
+            "url": "http://127.0.0.1:3000/eps/doctores",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2023-12-05T22:01:39.214Z",
+            "modified": "2023-12-07T20:18:31.232Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id_prof\": 10246546,\n  \"nombre\": \"Laura\",\n  \"apellido\": \"Castro\",\n  \"correo\": \"laura.castro@eps.com.co\",\n  \"telefono\": \"3124567893\",\n  \"especialidad\": 4\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cf9f952a-66ac-49fc-a2f7-0f0cb50c9120",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "GET Paciente",
+            "url": "http://127.0.0.1:3000/eps/pacientes/12345678",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-12-05T21:51:42.902Z",
+            "modified": "2023-12-05T21:52:11.094Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7f1464c1-1aa2-49d6-94d8-23f44044f635",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "GET Cita",
+            "url": "http://127.0.0.1:3000/eps/citas/mi-cita?profesional=10246546&paciente=765663&fecha=2023-11-04T20:40:00.000Z",
+            "method": "GET",
+            "sortNum": 22500,
+            "created": "2023-12-07T20:15:59.400Z",
+            "modified": "2023-12-07T20:42:14.054Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "profesional",
+                    "value": "10246546",
+                    "isPath": false
+                },
+                {
+                    "name": "paciente",
+                    "value": "765663",
+                    "isPath": false
+                },
+                {
+                    "name": "fecha",
+                    "value": "2023-11-04T20:40:00.000Z",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "78bfd301-32a4-4302-9cf6-5f8ac478ec4e",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "GET Doctor",
+            "url": "http://127.0.0.1:3000/eps/doctores/10246546",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-12-05T22:02:01.327Z",
+            "modified": "2023-12-07T20:18:48.602Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "124605b5-c222-4029-8b78-a4ef46ed386e",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "GET Pacientes",
+            "url": "http://127.0.0.1:3000/eps/pacientes",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-12-05T21:52:19.807Z",
+            "modified": "2023-12-05T21:52:24.965Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "726628ed-c7c4-42ff-92a1-19f415b0dd24",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "GET Citas",
+            "url": "http://127.0.0.1:3000/eps/citas",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2023-12-07T20:16:38.135Z",
+            "modified": "2023-12-07T20:19:17.905Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "44c6b4c6-9352-4da3-9401-e67bba59119f",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "GET Doctores",
+            "url": "http://127.0.0.1:3000/eps/doctores",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-12-05T22:02:26.405Z",
+            "modified": "2023-12-05T22:02:38.778Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "cf599323-47e4-4bc9-82cf-30b33487ed7f",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "UPDATE Paciente",
+            "url": "http://127.0.0.1:3000/eps/pacientes/12345678",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-12-05T21:52:46.192Z",
+            "modified": "2023-12-05T21:53:38.856Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"num_cedula\": 12345678,\n  \"nombre\": \"Sofia\",\n  \"apellido\": \"Florez\",\n  \"edad\": \"1970-11-01\",\n  \"telefono\": \"402756446\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e4d2563a-53c0-49ab-8af6-cf5ea08b5901",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "UPDATE Doctor",
+            "url": "http://127.0.0.1:3000/eps/doctores/12345678",
+            "method": "PUT",
+            "sortNum": 55000,
+            "created": "2023-12-05T22:03:12.334Z",
+            "modified": "2023-12-07T18:33:29.477Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id_prof\": 12345678,\n  \"nombre\": \"Angie\",\n  \"apellido\": \"Castro\",\n  \"correo\": \"angie.castro@eps.com.co\",\n  \"telefono\": \"3017264589\",\n  \"especialidad\": 8\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "075e11e3-4ff8-4ce1-a4d5-05610d08b6c2",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "UPDATE Cita",
+            "url": "http://127.0.0.1:3000/eps/citas?profesional=12345678&paciente=765663&fecha=2023-11-04T20:40:00.000Z",
+            "method": "PUT",
+            "sortNum": 57500,
+            "created": "2023-12-07T20:16:47.666Z",
+            "modified": "2023-12-07T20:44:08.547Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "profesional",
+                    "value": "12345678",
+                    "isPath": false
+                },
+                {
+                    "name": "paciente",
+                    "value": "765663",
+                    "isPath": false
+                },
+                {
+                    "name": "fecha",
+                    "value": "2023-11-04T20:40:00.000Z",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"fecha_hora\": \"2023-11-04T17:40:00\",\n  \"num_cedula\": 765663,\n  \"id_prof\": 12345678\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f5983103-3629-4e0c-940f-b439ac3b81f7",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "DELETE Paciente",
+            "url": "http://127.0.0.1:3000/eps/pacientes/12",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-12-05T21:53:52.216Z",
+            "modified": "2023-12-05T21:54:53.860Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1f7b564a-f9e1-4883-bd24-c92a7c6f2d30",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "DELETE Cita",
+            "url": "http://127.0.0.1:3000/eps/citas?profesional=12345678&paciente=765663&fecha=2023-11-04T22:40:00.000Z",
+            "method": "DELETE",
+            "sortNum": 65000,
+            "created": "2023-12-07T20:17:20.011Z",
+            "modified": "2023-12-07T20:45:05.243Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "profesional",
+                    "value": "12345678",
+                    "isPath": false
+                },
+                {
+                    "name": "paciente",
+                    "value": "765663",
+                    "isPath": false
+                },
+                {
+                    "name": "fecha",
+                    "value": "2023-11-04T22:40:00.000Z",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "f277e252-6f92-4f89-993d-4d98854a9f81",
+            "colId": "a66e784a-1788-4b54-873d-e3ed82f6c416",
+            "containerId": "",
+            "name": "DELETE Doctor",
+            "url": "http://127.0.0.1:3000/eps/doctores/12345678",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2023-12-05T22:03:33.960Z",
+            "modified": "2023-12-07T18:33:45.851Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

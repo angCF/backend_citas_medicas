@@ -58,7 +58,7 @@ export const updateDoctor: RequestHandler = async (req, res) => {
         const doctor = await Doctor.findByPk(req.params.id)
         if (doctor) {
             await Doctor.update(req.body, {
-                where: { num_cedula: req.params.id }
+                where: { id_prof: req.params.id }
             });
             res.status(200).json({
                 message: 'Operation successful'
@@ -81,7 +81,7 @@ export const deleteDoctor: RequestHandler = async (req, res) => {
         const doctor = await Doctor.findByPk(req.params.id)
         if (doctor) {
             await Doctor.destroy({
-                where: { num_cedula: req.params.id }
+                where: { id_prof: req.params.id }
             });
             res.status(200).json({
                 message: 'Operation successful'

@@ -16,9 +16,15 @@ export const getCitas: RequestHandler = async (req, res) => {
         });
     }
 }
-export const getCita: RequestHandler = async (req, res) => {
+export const getOneCita: RequestHandler = async (req, res) => {
     try {
-        const cita = await Cita.findByPk(req.params.id);
+        const {profesional, paciente, fecha} = req.query;
+        const cita = await Cita.findOne({
+            where: {
+                fecha_hora: fecha,
+                num_cedula: paciente,
+                id_prof: profesional
+            }});
         if (cita) {
             res.status(200).json({
                 message: 'Operation successful',
@@ -55,10 +61,18 @@ export const createCita: RequestHandler = async (req, res) => {
 }
 export const updateCita: RequestHandler = async (req, res) => {
     try {
-        const cita = await Cita.findByPk(req.params.id)
+        const {profesional, paciente, fecha} = req.query;
+        const cita = await Cita.findOne({
+            where: {
+                fecha_hora: fecha,
+                num_cedula: paciente,
+                id_prof: profesional
+            }});
         if (cita) {
             await Cita.update(req.body, {
-                where: { num_cedula: req.params.id }
+                where: { fecha_hora: fecha,
+                    num_cedula: paciente,
+                    id_prof: profesional}
             });
             res.status(200).json({
                 message: 'Operation successful'
@@ -78,10 +92,18 @@ export const updateCita: RequestHandler = async (req, res) => {
 }
 export const deleteCita: RequestHandler = async (req, res) => {
     try {
-        const cita = await Cita.findByPk(req.params.id)
+        const {profesional, paciente, fecha} = req.query;
+        const cita = await Cita.findOne({
+            where: {
+                fecha_hora: fecha,
+                num_cedula: paciente,
+                id_prof: profesional
+            }});
         if (cita) {
             await Cita.destroy({
-                where: { num_cedula: req.params.id }
+                where: { fecha_hora: fecha,
+                    num_cedula: paciente,
+                    id_prof: profesional }
             });
             res.status(200).json({
                 message: 'Operation successful'

@@ -28,7 +28,7 @@ export class Paciente extends Model {
     })
     edad !: Date
     @Column({
-        type: DataType.STRING,
+        type: DataType.DATE,
         allowNull: false
     })
     telefono !: string
